@@ -6,16 +6,121 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link rel="stylesheet" href="./src/style.css" type="text/css">
   <!-- FONTS/ FRAUNCES AND MANROPE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap"
     rel="stylesheet">
+  <!-- FAVICON -->
+  <link rel="icon" href="./images/favicon-32x32.png" type="image/png">
 </head>
 
 <body>
+  <header class="header" id="home">
+    <div class="container wrapper">
+      <nav class="justify-space-between padding-block-500">
+        <div class="logo">
+          <img src="./images/logo-light.svg" alt="Workit">
+        </div>
+        <button class="nav-btn">Apply for access</button>
+      </nav>
 
+      <div class="hero">
+        <div class="hero__content">
+          <h1 class="heading">Data <span class="underline">tailored</span> to <br> your needs</h1>
+          <button class="btn hero-btn">Learn more</button>
+        </div>
+
+        <div class="hero__image">
+          <img src="./images/image-hero.webp" alt="">
+        </div>
+      </div>
+
+      <div class="pattern-wrapper">
+        <img class="pattern pt-1" src="./images/bg-pattern-1.svg" alt="">
+        <img class="pattern pt-2" src="./images/bg-pattern-2.svg" alt="">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cta padding-block-900">
+      <div class="container">
+        <div class="even-columns">
+
+          <div class="card">
+            <div class="numbereds-list">
+              <div class="heading numbered">1</div>
+            </div>
+
+            <div class="cta-content">
+              <h2 class="heading">Actionable insights</h2>
+              <p>Optimize your products, improve customer satisfaction and stay ahead of the competition
+                with our product data analytics.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="numbereds-list">
+              <div class="heading numbered">2</div>
+            </div>
+
+            <div class="cta-content">
+              <h2 class="heading">Data-driven decisions</h2>
+              <p>Make data-driven decisions with our product data analytics. Our AI-generated reports help
+                you unlock insights hidden in your product data.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="numbereds-list">
+              <div class="heading numbered">3</div>
+            </div>
+
+            <div class="cta-content">
+              <h2 class="heading">Always affordable</h2>
+              <p>Always affordable pricing that scales with your business. Get top-quality product data
+                analytics services without hidden costs or unexpected fees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="founder padding-block-900">
+      <div class="container">
+        <div class="founder-wrapper">
+          <div class="founder-image">
+            <img src="./images/image-founder.webp" alt="">
+          </div>
+
+          <div class="founder__message-wrapper">
+            <h3 class="heading">Be the first to test</h3>
+            <p>Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a
+              beta tester for our app and kickstart your company. Apply for access below and I’ll be
+              in touch to schedule a call.</p>
+            <button class="btn founder-btn">Apply for access</button>
+            <div class="pattern pt-3">
+              <img src="./images/bg-pattern-3.svg" alt="">
+            </div>
+          </div>
+    </section>
+    </div>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__logo">
+      <a href="#home"><img src="./images/logo-dark.svg" alt=""></a>
+    </div>
+
+    <div class="social-icons">
+      <img src="./images/icon-facebook.svg" alt="">
+      <img src="./images/icon-twitter.svg" alt="">
+      <img src="./images/icon-instagram.svg" alt="">
+    </div>
+  </footer>
 </body>
 
 </html>
