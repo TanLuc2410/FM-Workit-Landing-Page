@@ -8,7 +8,6 @@ The challenge is here: [Workit Landing Page](https://www.frontendmentor.io/chall
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Header](#1-the-header-section)
   - [Main](#2-the-main-section)
@@ -36,11 +35,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./images/Workit%20README.png)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## 🛠️ My Process
 
