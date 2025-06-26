@@ -1,6 +1,7 @@
-# Frontend Mentor - Workit landing page solution
+# Frontend Mentor - Workit landing page challenge
 
-This is a solution to the [Workit landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This project is a challenge from Frontend Mentor where I re-create the static web page based on the figma file.
+The challenge is here: [Workit Landing Page](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu)
 
 ## Table of contents
 
@@ -9,6 +10,9 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
+  - [Header](#1-the-header-section)
+  - [Main](#2-the-main-section)
+  - [Footer](#3-the-footer-section)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
@@ -20,6 +24,8 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
 
 ## Overview
 
+This is a responsive landing page solution for the Workit Landing Page challenge on Frontend Mentor. Built with HTML and CSS, the project focuses on clean layout structure, visual hierarchy, and responsive design. It showcases a promotional page for a fictional startup, highlighting strong call-to-actions and bold typography. This project was created to strengthen my skills in semantic HTML and mobile-first CSS styling.
+
 ### The challenge
 
 Users should be able to:
@@ -29,22 +35,50 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/Workit%20README.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+## 🛠️ My Process
+
+I approached this project with the intention to finish each section separately, working from top to bottom. I started by writing the HTML for the section I wanted to work on first, then used CSS to create custom properties, utility classes, and styles.
+
+### 1. The `<header>` Section
+
+This was the part where I struggled the most. There were **two major problems** in this section:
+
+- **The "curved" bottom border**
+- **The background patterns**
+
+#### Curved Border
+
+I initially tried solving this by setting `border-radius` on the bottom corners and using negative margins to stretch out the background. However, this caused the background to overflow. Even after setting `body { overflow-x: hidden; }`, the issue persisted. I only found the solution after browsing other people's ideas — by using the `clip-path` property, I was finally able to create the curved background without any overflow issues.
+
+#### Background Patterns
+
+This second problem frustrated me quite a bit. While the pattern on the left was normal and easy to position, the second pattern on the right kept overflowing along the x-axis. I had **absolutely no idea why** it happened. I tried many approaches but nothing seemed to work.
+
+Eventually, I decided to position it **inside the viewport width** (`vw`). Although it doesn’t look exactly precise compared to the original design, at least it doesn’t cause overflow. Now that I think about it — _what if I used the pseudo-element `::after` and set its `background-image` to be the pattern?_ Would it turn out differently? I intend to try out that option in another project.
+
+### 2. The `<main>` Section
+
+My `<main>` section consists of two parts: **Call-to-action** and **Founder Image**.
+
+#### Call-to-action
+
+This part is relatively easy. I did come across some issues, but nothing major. The thing I learned from this interaction is that using default block elements' behavior with margin for spacing is sometimes better than using CSS Grid or Flexbox. With the mobile-first approach, I think this solution is more optimal.
+
+#### Founder Image
+
+This is where it gets a bit tricky. The problem was positioning the founder's message section relative to the founder's image. While it is quite simple to do it on mobile, when it comes to tablet and desktop mode, I had to change the message section `<width>` **based on the viewport width (`vw`)**.  
+The solution I came up with was abstracting the message wrapper `<width>`, and it worked fantastically.
+
+### 3. The `<footer>` Section
+
+This section is the simplest part. I used CSS Grid to center the logo and social icons — and it's done.
 
 ### Built with
 
@@ -53,61 +87,27 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- `clip-path` css property
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I believe I still need more experience with positioning backgrond image and making background shapes. Addtionally, I need to use abstraction more in my css code to feel comfortable with it.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [clip-path MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+- [Youtube: clip-path tutorial](https://www.youtube.com/watch?v=oWXm5n-Zi38)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Khuu Tan Luc](https://lucfrontenddev.framer.website/)
+- Frontend Mentor - [@TanLuc2410](https://www.frontendmentor.io/profile/TanLuc2410)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+The clip-path solution was inspried by [Frontend Mentor: Onias da Rocha Filho](https://www.frontendmentor.io/solutions/react-with-typescript-and-css3-fully-responsive-b1e38TJe1r)
